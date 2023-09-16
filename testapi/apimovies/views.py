@@ -1,5 +1,4 @@
-from django.http import JsonResponse
-from rest_framework import serializers,status
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import *
@@ -25,8 +24,8 @@ def movie_list(request,format = None):
 def movie_details(request,id, format = None):
  
     try:
-        movie = MovieSerializer.objects.get(pk=id)
-    except Movie.DoesNotExists:
+        movie = Movie.objects.get(pk=id)
+    except Movie.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     
     if request.method == 'GET':
