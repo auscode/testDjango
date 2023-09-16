@@ -1,6 +1,10 @@
 import requests
 
+url = 'http://127.0.0.1:8000/apimovies/'
+response = requests.get(url)
 
-# https://urban-space-garbanzo-4rqxrqx9997c7w76-8000.app.github.dev/apimovies/
-response = requests.get('https://urban-space-garbanzo-4rqxrqx9997c7w76-8000.app.github.dev/apimovies/')
-print(response.json)
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f"Request failed with status code {response.status_code}")
