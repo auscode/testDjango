@@ -20,14 +20,9 @@ DEBUG = False
 
 # Use the PORT environment variable if available, otherwise, default to 10000
 port = int(os.environ.get("PORT", 10000))
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "your_project.settings")
+
 
 ALLOWED_HOSTS = ["*"]  # Allow all hosts for testing purposes
-execute_from_command_line(["manage.py", "runserver", f"0.0.0.0:{port}"])
-# Update the Django development server settings to bind to 0.0.0.0
-# This allows it to accept external connections.
-# if "runserver" in sys.argv:
-#     sys.argv.append("0.0.0.0:" + str(port))
 
 
 # Application definition
