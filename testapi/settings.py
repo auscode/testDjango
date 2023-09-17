@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from decouple import config
 
@@ -15,7 +16,15 @@ SECRET_KEY =  config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+# Use the PORT environment variable if available, otherwise, default to 10000
+port = int(os.environ.get("PORT", 10000))
+
+ALLOWED_HOSTS = ["*"]  # Allow all hosts for testing purposes
+
+# Update the Django development server settings to bind to 0.0.0.0
+# This allows it to accept external connections.
+if "runserver" in sys.argv:
+    sys.argv.append("0.0.0.0:" + str(port))
 
 
 # Application definition
