@@ -18,6 +18,9 @@ def movie_list(request,format = None):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            # If the serializer is not valid, return a response with errors
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
 
 
 @api_view(['GET','PUT','DELETE'])
