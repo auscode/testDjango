@@ -77,4 +77,3 @@ curl -X POST -H "Content-Type: application/json" -d '{
 Feel free to modify and expand upon this basic setup to meet your specific requirements for CRUD operations in your Django API.
 
 For any questions or issues, please create a GitHub issue in this repository. Happy coding!
-```
