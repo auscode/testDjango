@@ -1,7 +1,13 @@
-```markdown
+
 # testdjango Repository
 
-This repository contains a basic Django setup for applying CRUD (Create, Read, Update, Delete) operations in an API. It uses Django and Django Rest Framework to create a simple API for managing movies. Follow the instructions below to set up and run the project.
+This repository contains a basic Django setup for applying <strong>CRUD</strong> (Create, Read, Update, Delete) operations in an API. It uses Django and Django Rest Framework to create a simple API for managing movies. Follow the instructions below to set up and run the project.
+## Demo Images
+
+- ![img1.png](demoImages/img1.png)
+- ![img2.png](demoImages/img2.png)
+- ![img3.png](demoImages/img3.png)
+- ![img4.png](demoImages/img4.png)
 
 ## Prerequisites
 
